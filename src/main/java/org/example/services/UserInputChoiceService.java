@@ -9,9 +9,12 @@ public class UserInputChoiceService {
   Scanner scanner = new Scanner(System.in);
 
   public int userInputChoice() {
-
     menuPrompt.showMenu();
     System.out.print("On what field should the users be sorted on (Enter choice) :  ");
+    return getUserInputChoice();
+  }
+
+  public int getUserInputChoice() {
     try {
       int userInputChoice = scanner.nextInt();
       return userInputChoice;

@@ -39,7 +39,13 @@ public class AddUserDetailsService implements AddUserDetailsServiceInterface {
     try {
       UserInfoInputService userInfoInputService = new UserInfoInputService();
       userInfoInputService.userInfoInputPrompt(this);
-
+      return setNewUser();
+    } catch (Exception e) {
+      throw new InvalidArgument("Error : " + e.getMessage());
+    }
+  }
+  public User setNewUser(){
+    try {
       UserDetailValidator userDetailValidator = new UserDetailValidator(fullName, age, address,
           rollNo, setOfCourses);
       userDetailValidator.validate();

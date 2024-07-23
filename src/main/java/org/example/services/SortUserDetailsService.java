@@ -8,11 +8,11 @@ import org.example.model.User;
 public class SortUserDetailsService implements SortUserDetailsServiceInterface {
 
   private final UserInputChoiceService userInputChoiceService;
-  private final UserInputOrderChoiceService userInputOrderPrompt;
+  private final UserInputOrderService userInputOrderPrompt;
   private final Map<Integer, Comparator<User>> comparatorMap;
 
   public SortUserDetailsService(UserInputChoiceService userInputChoiceService,
-                                UserInputOrderChoiceService userInputOrderPrompt) {
+                                UserInputOrderService userInputOrderPrompt) {
     this.userInputChoiceService = userInputChoiceService;
     this.userInputOrderPrompt = userInputOrderPrompt;
     this.comparatorMap = Map.of(1, (a, b) -> a.getName().compareTo(b.getName()), 2,
