@@ -10,6 +10,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/AddUserDetailsService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/AddUserDetailsServiceInterface.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UserInfoInputService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UserManagerInterface.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/validators/UserDetailValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/enums/CourseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/CourseType.java" afterDir="false" />
@@ -62,8 +63,8 @@
       <recent name="C:\Users\VICTUS\IdeaProjects\NucleiAssignment" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="org.example.validator" />
       <recent name="org.example.services" />
+      <recent name="org.example.validator" />
       <recent name="org.example.command" />
     </key>
   </component>
