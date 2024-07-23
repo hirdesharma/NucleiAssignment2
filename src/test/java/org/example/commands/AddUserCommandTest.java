@@ -8,8 +8,6 @@ import static org.mockito.Mockito.when;
 
 import java.util.HashSet;
 import java.util.Set;
-import org.example.command.AddUserCommand;
-import org.example.command.UserCommandInterface;
 import org.example.exceptions.InvalidArgument;
 import org.example.model.User;
 import org.example.services.AddUserDetailsServiceInterface;

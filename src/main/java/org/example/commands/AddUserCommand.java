@@ -1,4 +1,4 @@
-package org.example.command;
+package org.example.commands;
 
 import java.util.Set;
 import org.example.exceptions.InvalidArgument;
