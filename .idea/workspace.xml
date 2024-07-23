@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="078a0c1c-4e5e-4105-9675-7c08a0150d15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/command/AddUserCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/command/UserCommandInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/AddUserDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/AddUserDetailsServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UserInfoInputService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UserManagerInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/validators/UserDetailValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/enums/CourseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/CourseType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exceptions/InvalidArgument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exceptions/InvalidArgument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/command/DeleteUserCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,9 +53,10 @@
       <recent name="C:\Users\VICTUS\IdeaProjects\NucleiAssignment" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.command" />
+      <recent name="org.example.prompt" />
       <recent name="org.example.services" />
       <recent name="org.example.validator" />
-      <recent name="org.example.command" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
