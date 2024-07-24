@@ -44,7 +44,8 @@ public class AddUserDetailsService implements AddUserDetailsServiceInterface {
       throw new InvalidArgument("Error : " + e.getMessage());
     }
   }
-  public User setNewUser(){
+
+  public User setNewUser() {
     try {
       UserDetailValidator userDetailValidator = new UserDetailValidator(fullName, age, address,
           rollNo, setOfCourses);
