@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.discstorage.UserInfoDiscStorageHandler;
 import org.example.services.AddUserDetailsService;
 import org.example.services.AddUserDetailsServiceInterface;
 import org.example.services.DeleteUserDetailsService;
@@ -24,11 +25,13 @@ public class Main {
       UserInputChoiceService userInputChoiceService = new UserInputChoiceService();
       UserInputOrderService userInputOrderPrompt = new UserInputOrderService();
       DeleteUserDetailsServiceInterface deleteUserDetails = new DeleteUserDetailsService();
+      UserInfoDiscStorageHandler userInfoDiscStorageHandler = new UserInfoDiscStorageHandler();
       SortUserDetailsServiceInterface sortUserDetailsService =
           new SortUserDetailsService(userInputChoiceService, userInputOrderPrompt);
 
       UserManager userManager = new UserManager(userInteractionService,
-          addUserDetailsService, sortUserDetailsService, deleteUserDetails);
+          addUserDetailsService, sortUserDetailsService, deleteUserDetails,
+          userInfoDiscStorageHandler);
 
       userManager.startManager();
     } catch (Exception e) {
