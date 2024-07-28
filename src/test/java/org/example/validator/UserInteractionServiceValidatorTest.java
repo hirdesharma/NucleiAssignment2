@@ -13,18 +13,18 @@ class UserInteractionServiceValidatorTest {
 
   @Test
   void testValidateUserChoiceValid() {
-    assertDoesNotThrow(() -> validator.validate(1));
-    assertDoesNotThrow(() -> validator.validate(3));
-    assertDoesNotThrow(() -> validator.validate(5));
+    assertDoesNotThrow(() -> validator.validateUserChoice(1));
+    assertDoesNotThrow(() -> validator.validateUserChoice(3));
+    assertDoesNotThrow(() -> validator.validateUserChoice(5));
   }
 
   @Test
   void testValidateUserChoiceTooLow() {
-    assertThrows(InvalidArgument.class, () -> validator.validate(0));
+    assertThrows(InvalidArgument.class, () -> validator.validateUserChoice(0));
   }
 
   @Test
   void testValidateUserChoiceTooHigh() {
-    assertThrows(InvalidArgument.class, () -> validator.validate(6));
+    assertThrows(InvalidArgument.class, () -> validator.validateUserChoice(6));
   }
 }

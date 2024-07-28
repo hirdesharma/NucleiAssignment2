@@ -13,8 +13,8 @@ public class AddUserCommand implements UserCommandInterface {
   }
 
   @Override
-  public void execute(Set<User> users) {
-    User newUser = addUserDetails.newUser();
+  public void execute(final Set<User> users) {
+    User newUser = addUserDetails.addUser();
     if (users.stream().noneMatch(user -> user.getRollNumber().equals(newUser.getRollNumber()))) {
       users.add(newUser);
       return;

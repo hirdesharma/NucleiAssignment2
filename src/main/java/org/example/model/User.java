@@ -10,8 +10,8 @@ public class User implements Comparable<User>, Serializable {
   private String rollNumber;
   private String[] enrolledCourses;
 
-  public User(String name, String rollNumber, int age, String address,
-              String[] enrolledCourses) {
+  public User(final String name, final String rollNumber, final int age, final String address,
+              final String[] enrolledCourses) {
     this.name = name;
     this.age = age;
     this.address = address;
@@ -46,6 +46,7 @@ public class User implements Comparable<User>, Serializable {
     return enrolledCourses;
   }
 
+  @Override
   public int compareTo(User o) {
     if (name.equals(o.name)) {
       return rollNumber.compareTo(o.rollNumber);

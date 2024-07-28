@@ -5,15 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="078a0c1c-4e5e-4105-9675-7c08a0150d15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/commands/AddUserCommandTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/services/AddUserDetailsServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/services/DeleteUserDetailsServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/services/SortUserDetailsServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/services/UserInputChoiceServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/validator/UserDetailValidatorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/discstorage/StorageHandlerInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/AddUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/AddUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/ProgramTerminateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/ProgramTerminateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/SaveUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/SaveUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/SortUserCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/SortUserCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/commands/UserCommandInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/commands/UserCommandInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/discstorage/UserInfoDiscStorageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/discstorage/UserInfoDiscStorageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/enums/CourseType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/CourseType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/prompt/MenuPrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/prompt/MenuPrompt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/AddUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/AddUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/UserInputChoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UserInputChoiceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/AddUserDetailsServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/AddUserDetailsServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/DeleteUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/DeleteUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/SortUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/SortUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/UserInfoInputService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UserInfoInputService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/UserInteractionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UserInteractionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/UserManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/UserManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/validators/UserDetailValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/validators/UserDetailValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/validators/UserInteractionServiceValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/validators/UserInteractionServiceValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/commands/AddUserCommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/commands/AddUserCommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/services/AddUserDetailsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/services/AddUserDetailsServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/services/DeleteUserDetailsServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/services/DeleteUserDetailsServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/validator/UserInteractionServiceValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/validator/UserInteractionServiceValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,15 +67,16 @@
       <list>
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2jeI4Om4zDeAcsnmaJDC6isixIY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -71,19 +89,23 @@
   "keyToString": {
     "Gradle.AddUserCommandTest.executor": "Run",
     "Gradle.AddUserDetailsServiceTest.executor": "Run",
+    "Gradle.AddUserDetailsServiceTest.testNewUserWithInvalidDetails.executor": "Run",
     "Gradle.AddUserDetailsServiceTest.testNewUserWithValidDetails.executor": "Run",
     "Gradle.DeleteUserDetailsServiceTest.executor": "Run",
+    "Gradle.DeleteUserDetailsServiceTest.testDeleteUserNotFound.executor": "Run",
     "Gradle.NucleiAssignment [:Main.main()].executor": "Run",
     "Gradle.NucleiAssignment [dependencies].executor": "Run",
     "Gradle.SortUserDetailsServiceTest.executor": "Run",
     "Gradle.UserDetailValidatorTest.executor": "Run",
+    "Gradle.UserInfoInputServiceTest.executor": "Run",
+    "Gradle.UserInfoInputServiceTest.testUserInfoInputPromptWithValidDetails.executor": "Debug",
     "Gradle.UserInputChoiceServiceTest.executor": "Run",
     "Gradle.UserInputChoiceServiceTest.testUserInputChoiceValid.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "feature/project-setup",
+    "git-widget-placeholder": "core-features-implementation",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/VICTUS/IdeaProjects/NucleiAssignment/src/test/java/org/example",
     "onboarding.tips.debug.path": "C:/Users/VICTUS/IdeaProjects/NucleiAssignment/src/main/java/org/example/Main.java"
@@ -107,7 +129,7 @@
       <recent name="org.example.prompt" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AddUserCommandTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="NucleiAssignment.main" />
@@ -121,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AddUserCommandTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddUserDetailsServiceTest.testNewUserWithInvalidDetails" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -134,7 +156,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.commands.AddUserCommandTest&quot;" />
+            <option value="&quot;org.example.services.AddUserDetailsServiceTest.testNewUserWithInvalidDetails&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -145,7 +167,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AddUserDetailsServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddUserDetailsServiceTest.testNewUserWithValidDetails" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -158,7 +180,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.services.AddUserDetailsServiceTest&quot;" />
+            <option value="&quot;org.example.services.AddUserDetailsServiceTest.testNewUserWithValidDetails&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,7 +191,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserInputChoiceServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DeleteUserDetailsServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -182,7 +204,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.services.UserInputChoiceServiceTest&quot;" />
+            <option value="&quot;org.example.services.DeleteUserDetailsServiceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,7 +215,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserInputChoiceServiceTest.testUserInputChoiceValid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DeleteUserDetailsServiceTest.testDeleteUserNotFound" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -206,7 +228,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.services.UserInputChoiceServiceTest.testUserInputChoiceValid&quot;" />
+            <option value="&quot;org.example.services.DeleteUserDetailsServiceTest.testDeleteUserNotFound&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -219,11 +241,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AddUserCommandTest" />
-        <item itemvalue="Gradle.UserInputChoiceServiceTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.UserInputChoiceServiceTest.testUserInputChoiceValid" />
-        <item itemvalue="Gradle.AddUserDetailsServiceTest" />
+        <item itemvalue="Gradle.DeleteUserDetailsServiceTest" />
+        <item itemvalue="Gradle.DeleteUserDetailsServiceTest.testDeleteUserNotFound" />
+        <item itemvalue="Gradle.AddUserDetailsServiceTest.testNewUserWithInvalidDetails" />
+        <item itemvalue="Gradle.AddUserDetailsServiceTest.testNewUserWithValidDetails" />
       </list>
     </recent_temporary>
   </component>
@@ -237,16 +259,5 @@
       <updated>1721740925788</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

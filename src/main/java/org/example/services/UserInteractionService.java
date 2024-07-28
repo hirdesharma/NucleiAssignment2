@@ -9,12 +9,6 @@ public class UserInteractionService implements UserInteractionServiceInterface {
   private int userChoice;
 
   Scanner scanner = new Scanner(System.in);
-  UserInteractionServiceValidator userInteractionServiceValidator;
-
-  public UserInteractionService(UserInteractionServiceValidator userInteractionServiceValidator) {
-    this.userInteractionServiceValidator = userInteractionServiceValidator;
-  }
-
   MenuPrompt menuPrompt = new MenuPrompt();
 
   @Override
@@ -25,7 +19,7 @@ public class UserInteractionService implements UserInteractionServiceInterface {
     } catch (Exception e) {
       throw new InvalidArgument("Input should be an integer number");
     }
-    userInteractionServiceValidator.validate(userChoice);
+    UserInteractionServiceValidator.validateUserChoice(userChoice);
     return userChoice;
   }
 }

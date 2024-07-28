@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.commands.SaveUserCommand;
 import org.example.discstorage.UserInfoDiscStorageHandler;
 import org.example.services.AddUserDetailsService;
 import org.example.services.AddUserDetailsServiceInterface;
@@ -19,8 +20,7 @@ public class Main {
     try {
       UserInteractionServiceValidator userInteractionServiceValidator =
           new UserInteractionServiceValidator();
-      UserInteractionServiceInterface userInteractionService = new UserInteractionService(
-          userInteractionServiceValidator);
+      UserInteractionServiceInterface userInteractionService = new UserInteractionService();
       AddUserDetailsServiceInterface addUserDetailsService = new AddUserDetailsService();
       UserInputChoiceService userInputChoiceService = new UserInputChoiceService();
       UserInputOrderService userInputOrderPrompt = new UserInputOrderService();
@@ -28,10 +28,11 @@ public class Main {
       UserInfoDiscStorageHandler userInfoDiscStorageHandler = new UserInfoDiscStorageHandler();
       SortUserDetailsServiceInterface sortUserDetailsService =
           new SortUserDetailsService(userInputChoiceService, userInputOrderPrompt);
+      SaveUserCommand saveUserCommand = new SaveUserCommand(userInfoDiscStorageHandler);
 
       UserManager userManager = new UserManager(userInteractionService,
           addUserDetailsService, sortUserDetailsService, deleteUserDetails,
-          userInfoDiscStorageHandler);
+          userInfoDiscStorageHandler, saveUserCommand);
 
       userManager.startManager();
     } catch (Exception e) {

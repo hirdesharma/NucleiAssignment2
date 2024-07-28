@@ -1,5 +1,6 @@
 package org.example.enums;
 
+import java.util.Objects;
 import org.example.exceptions.InvalidArgument;
 
 public enum CourseType {
@@ -10,8 +11,8 @@ public enum CourseType {
   E,
   F;
 
-  public static CourseType fromString(String type) {
-    if (type == null) {
+  public static CourseType fromString(final String type) {
+    if (Objects.isNull(type)) {
       throw new InvalidArgument("Item type cannot be null");
     }
     try {

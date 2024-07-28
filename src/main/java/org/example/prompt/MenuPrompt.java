@@ -1,7 +1,7 @@
 package org.example.prompt;
 
 public class MenuPrompt {
-  public void showMenu() {
+  public static void showMenu() {
     System.out.println("1.Add User details");
     System.out.println("2.Display User details");
     System.out.println("3.Delete User details");

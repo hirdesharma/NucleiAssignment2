@@ -12,7 +12,7 @@ public class SortUserCommand implements UserCommandInterface {
   }
 
   @Override
-  public void execute(Set<User> users) {
+  public void execute(final Set<User> users) {
     sortUserDetails.sortUserDetails(users);
   }
 }

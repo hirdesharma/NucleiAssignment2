@@ -21,15 +21,14 @@ public class SortUserDetailsService implements SortUserDetailsServiceInterface {
         (a, b) -> a.getAddress().compareTo(b.getAddress()));
   }
 
-  public void sortUserDetails(Set<User> users) {
+  public void sortUserDetails(final Set<User> users) {
     int choice = userInputChoiceService.userInputChoice();
     int order = userInputOrderPrompt.userInputOrder();
 
     Comparator<User> comparator = comparatorMap.get(choice);
 
-    if (order == 2) {
-      comparator = comparator.reversed();
-    }
+    comparator = (order == 2) ? comparator.reversed() : comparator;
+
     users.stream().sorted(comparator).forEach(user -> user.display());
   }
 

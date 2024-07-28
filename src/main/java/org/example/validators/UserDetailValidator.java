@@ -11,8 +11,9 @@ public class UserDetailValidator {
   String rollNo;
   String[] setOfCourses;
 
-  public UserDetailValidator(String fullName, int age, String address, String rollNo,
-                             String[] setOfCourses) {
+  public UserDetailValidator(final String fullName, final int age, final String address,
+                             final String rollNo,
+                             final String[] setOfCourses) {
     this.fullName = fullName;
     this.age = age;
     this.address = address;

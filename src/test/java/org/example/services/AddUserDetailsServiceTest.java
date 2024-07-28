@@ -1,9 +1,11 @@
 package org.example.services;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import org.example.exceptions.InvalidArgument;
 import org.example.model.User;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,13 +22,11 @@ class AddUserDetailsServiceTest {
 
   @Test
   void testNewUserWithValidDetails() {
-    addUserDetailsService.setFullName("Hirdesh Sharma");
-    addUserDetailsService.setAge(25);
-    addUserDetailsService.setAddress("Bhind Daboha");
-    addUserDetailsService.setRollNo("A123");
-    addUserDetailsService.setSetOfCourses(new String[]{"A", "B", "C", "D"});
+    String input = "Hirdesh Sharma\n25\nBhind Daboha\nA123\nA B C D\n";
+    InputStream in = new ByteArrayInputStream(input.getBytes());
+    System.setIn(in);
 
-    User user = addUserDetailsService.setNewUser();
+    User user = addUserDetailsService.addUser();
 
     assertNotNull(user);
     assertEquals("Hirdesh Sharma", user.getName());
@@ -38,15 +38,12 @@ class AddUserDetailsServiceTest {
 
   @Test
   void testNewUserWithInvalidDetails() {
-    addUserDetailsService.setFullName("");
-    addUserDetailsService.setAge(-1);
-    addUserDetailsService.setAddress("");
-    addUserDetailsService.setRollNo("");
-    addUserDetailsService.setSetOfCourses(new String[]{});
-
+    String input = "\n-1\n\n\n\n";
+    InputStream in = new ByteArrayInputStream(input.getBytes());
+    System.setIn(in);
     assertThrows(
         InvalidArgument.class,
-        () -> addUserDetailsService.newUser()
+        () -> addUserDetailsService.addUser()
     );
   }
 }

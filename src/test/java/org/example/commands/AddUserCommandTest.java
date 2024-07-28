@@ -30,7 +30,7 @@ public class AddUserCommandTest {
   @Test
   public void testExecute_addsNewUser() {
     User newUser = new User("Hirdesh Sharma", "1001", 25, "Bhind Daboha", new String[]{"A"});
-    when(addUserDetailsService.newUser()).thenReturn(newUser);
+    when(addUserDetailsService.addUser()).thenReturn(newUser);
 
     addUserCommand.execute(users);
     assertTrue(users.contains(newUser), "User should be added to the set");
@@ -40,7 +40,7 @@ public class AddUserCommandTest {
   public void testExecute_UserAlreadyExists() {
     User existingUser = new User("Hirdesh Sharma", "1001", 25, "Bhind Daboha", new String[]{"A"});
     users.add(existingUser);
-    when(addUserDetailsService.newUser()).thenReturn(existingUser);
+    when(addUserDetailsService.addUser()).thenReturn(existingUser);
 
     InvalidArgument exception = assertThrows(InvalidArgument.class, () -> {
       addUserCommand.execute(users);
