@@ -10,9 +10,8 @@ public class AddUserDetailsService implements AddUserDetailsServiceInterface {
   public User addUser() {
     try {
       UserInfoInputService userInfoInputService = new UserInfoInputService();
-      User user = userInfoInputService.userInfoInputPrompt();
+      User user = userInfoInputService.createNewUser();
 
-      // validating the user details
       UserDetailValidator userDetailValidator = new UserDetailValidator(
           user.getName(), user.getAge(), user.getAddress(),
           user.getRollNumber(), user.getEnrolledCourses()

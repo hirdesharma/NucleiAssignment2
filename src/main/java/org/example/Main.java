@@ -18,25 +18,28 @@ import org.example.validators.UserInteractionServiceValidator;
 public class Main {
   public static void main(String[] args) {
     try {
-      UserInteractionServiceValidator userInteractionServiceValidator =
-          new UserInteractionServiceValidator();
-      UserInteractionServiceInterface userInteractionService = new UserInteractionService();
-      AddUserDetailsServiceInterface addUserDetailsService = new AddUserDetailsService();
-      UserInputChoiceService userInputChoiceService = new UserInputChoiceService();
-      UserInputOrderService userInputOrderPrompt = new UserInputOrderService();
-      DeleteUserDetailsServiceInterface deleteUserDetails = new DeleteUserDetailsService();
-      UserInfoDiscStorageHandler userInfoDiscStorageHandler = new UserInfoDiscStorageHandler();
-      SortUserDetailsServiceInterface sortUserDetailsService =
-          new SortUserDetailsService(userInputChoiceService, userInputOrderPrompt);
-      SaveUserCommand saveUserCommand = new SaveUserCommand(userInfoDiscStorageHandler);
-
-      UserManager userManager = new UserManager(userInteractionService,
-          addUserDetailsService, sortUserDetailsService, deleteUserDetails,
-          userInfoDiscStorageHandler, saveUserCommand);
-
+      UserManager userManager = createUserManager();
       userManager.startManager();
     } catch (Exception e) {
-      System.out.println("Error : " + e.getMessage());
+      System.out.println(e.getMessage());
     }
+  }
+
+  static UserManager createUserManager() {
+    UserInteractionServiceValidator userInteractionServiceValidator =
+        new UserInteractionServiceValidator();
+    UserInteractionServiceInterface userInteractionService = new UserInteractionService();
+    AddUserDetailsServiceInterface addUserDetailsService = new AddUserDetailsService();
+    UserInputChoiceService userInputChoiceService = new UserInputChoiceService();
+    UserInputOrderService userInputOrderPrompt = new UserInputOrderService();
+    DeleteUserDetailsServiceInterface deleteUserDetails = new DeleteUserDetailsService();
+    UserInfoDiscStorageHandler userInfoDiscStorageHandler = new UserInfoDiscStorageHandler();
+    SortUserDetailsServiceInterface sortUserDetailsService =
+        new SortUserDetailsService(userInputChoiceService, userInputOrderPrompt);
+    SaveUserCommand saveUserCommand = new SaveUserCommand(userInfoDiscStorageHandler);
+
+    return new UserManager(userInteractionService,
+        addUserDetailsService, sortUserDetailsService, deleteUserDetails,
+        userInfoDiscStorageHandler, saveUserCommand);
   }
 }

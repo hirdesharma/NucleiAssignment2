@@ -14,11 +14,11 @@ public class UserInputOrderService {
   }
 
   public int getUserInputOrder() {
-    try {
+    try{
       int userInput = scanner.nextInt();
       return userInput;
-    } catch (NumberFormatException e) {
-      throw new InvalidArgument("order should be 1 or 2");
+    }catch (Exception e){
+      throw new InvalidArgument("userInput should be a valid integer");
     }
   }
 }

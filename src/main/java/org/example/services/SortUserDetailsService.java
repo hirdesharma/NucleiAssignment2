@@ -3,6 +3,7 @@ package org.example.services;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.Set;
+import org.example.exceptions.InvalidArgument;
 import org.example.model.User;
 
 public class SortUserDetailsService implements SortUserDetailsServiceInterface {
@@ -22,14 +23,18 @@ public class SortUserDetailsService implements SortUserDetailsServiceInterface {
   }
 
   public void sortUserDetails(final Set<User> users) {
-    int choice = userInputChoiceService.userInputChoice();
-    int order = userInputOrderPrompt.userInputOrder();
+    try{
+      int choice = userInputChoiceService.userInputChoice();
+      int order = userInputOrderPrompt.userInputOrder();
 
-    Comparator<User> comparator = comparatorMap.get(choice);
+      Comparator<User> comparator = comparatorMap.get(choice);
 
-    comparator = (order == 2) ? comparator.reversed() : comparator;
+      comparator = (order == 2) ? comparator.reversed() : comparator;
 
-    users.stream().sorted(comparator).forEach(user -> user.display());
+      users.stream().sorted(comparator).forEach(user -> user.display());
+    }catch (Exception e){
+      throw new InvalidArgument("error : " + e.getMessage());
+    }
   }
 
 }

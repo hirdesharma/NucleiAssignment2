@@ -14,6 +14,9 @@ public class UserInteractionService implements UserInteractionServiceInterface {
   @Override
   public int displayMenuAndGetUserChoice() {
     menuPrompt.showMenu();
+    return getUserChoice();
+  }
+  private int getUserChoice(){
     try {
       userChoice = scanner.nextInt();
     } catch (Exception e) {

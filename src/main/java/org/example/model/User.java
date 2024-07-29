@@ -47,10 +47,10 @@ public class User implements Comparable<User>, Serializable {
   }
 
   @Override
-  public int compareTo(User o) {
-    if (name.equals(o.name)) {
-      return rollNumber.compareTo(o.rollNumber);
+  public int compareTo(final User A) {
+    if (name.equals(A.name)) {
+      return rollNumber.compareTo(A.rollNumber);
     }
-    return name.compareTo(o.name);
+    return name.compareTo(A.name);
   }
 }

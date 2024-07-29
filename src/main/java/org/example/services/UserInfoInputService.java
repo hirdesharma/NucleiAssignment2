@@ -6,7 +6,7 @@ import org.example.model.User;
 public class UserInfoInputService {
   Scanner scanner = new Scanner(System.in);
 
-  public User userInfoInputPrompt() {
+  public User createNewUser() {
     System.out.println("Enter New User Details\n");
     System.out.println("Enter Full Name");
     final String fullName = scanner.nextLine();
