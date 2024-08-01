@@ -10,7 +10,7 @@ import org.example.commands.ProgramTerminateCommand;
 import org.example.commands.SaveUserCommand;
 import org.example.commands.SortUserCommand;
 import org.example.commands.UserCommandInterface;
-import org.example.discstorage.UserInfoDiscStorageHandler;
+import org.example.discstorage.StorageHandler;
 import org.example.model.User;
 
 public class UserManager implements UserManagerInterface {
@@ -24,17 +24,17 @@ public class UserManager implements UserManagerInterface {
                      AddUserDetailsServiceInterface addUserDetails,
                      SortUserDetailsServiceInterface sortUserDetailsService,
                      DeleteUserDetailsServiceInterface deleteUserDetails,
-                     UserInfoDiscStorageHandler userInfoDiscStorageHandler,
+                     StorageHandler storageHandler,
                      SaveUserCommand saveUserCommand) {
     this.users = new HashSet<>();
-    this.users = userInfoDiscStorageHandler.getUsersFromDisk();
+    this.users = storageHandler.getUsersFromDisk();
     this.userInteractionService = userInteractionService;
     this.saveUserCommand = saveUserCommand;
     this.commandMap = new HashMap<>();
     commandMap.put(1, new AddUserCommand(addUserDetails));
     commandMap.put(2, new SortUserCommand(sortUserDetailsService));
     commandMap.put(3, new DeleteUserCommand(deleteUserDetails));
-    commandMap.put(4, new SaveUserCommand(userInfoDiscStorageHandler));
+    commandMap.put(4, new SaveUserCommand(storageHandler));
     commandMap.put(5, new ProgramTerminateCommand(saveUserCommand, this));
   }
 
@@ -46,9 +46,17 @@ public class UserManager implements UserManagerInterface {
   @Override
   public void startManager() {
     while (!terminateProgram) {
-      int userChoice = userInteractionService.displayMenuAndGetUserChoice();
-      UserCommandInterface command = commandMap.get(userChoice);
-      command.execute(users);
+      try {
+        int userChoice = userInteractionService.displayMenuAndGetUserChoice();
+        UserCommandInterface command = commandMap.get(userChoice);
+        if (command != null) {
+          command.execute(users);
+        } else {
+          System.out.println("Invalid choice. Please select a valid option.");
+        }
+      } catch (Exception e) {
+        System.out.println("An error occurred: " + e.getMessage());
+      }
     }
   }
 }

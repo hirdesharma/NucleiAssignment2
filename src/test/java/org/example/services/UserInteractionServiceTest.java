@@ -28,10 +28,10 @@ class UserInteractionServiceTest {
   }
   @Test
   public void testInvalidUserInput() {
-    String input = "4a\n";
+    String input = "4a\n1\n";
     System.setIn(new ByteArrayInputStream(input.getBytes()));
     UserInteractionService userInteractionService = new UserInteractionService();
-    assertThrows(InvalidArgument.class, ()->userInteractionService.displayMenuAndGetUserChoice());
+    assertEquals(userInteractionService.displayMenuAndGetUserChoice(),1);
   }
   @Test
   public void outOfBoundsUserInput() {

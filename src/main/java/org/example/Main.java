@@ -1,7 +1,7 @@
 package org.example;
 
 import org.example.commands.SaveUserCommand;
-import org.example.discstorage.UserInfoDiscStorageHandler;
+import org.example.discstorage.StorageHandler;
 import org.example.services.AddUserDetailsService;
 import org.example.services.AddUserDetailsServiceInterface;
 import org.example.services.DeleteUserDetailsService;
@@ -26,20 +26,20 @@ public class Main {
   }
 
   static UserManager createUserManager() {
-    UserInteractionServiceValidator userInteractionServiceValidator =
+    UserInteractionServiceValidator serviceValidator =
         new UserInteractionServiceValidator();
     UserInteractionServiceInterface userInteractionService = new UserInteractionService();
     AddUserDetailsServiceInterface addUserDetailsService = new AddUserDetailsService();
     UserInputChoiceService userInputChoiceService = new UserInputChoiceService();
     UserInputOrderService userInputOrderPrompt = new UserInputOrderService();
     DeleteUserDetailsServiceInterface deleteUserDetails = new DeleteUserDetailsService();
-    UserInfoDiscStorageHandler userInfoDiscStorageHandler = new UserInfoDiscStorageHandler();
+    StorageHandler storageHandler = new StorageHandler();
     SortUserDetailsServiceInterface sortUserDetailsService =
         new SortUserDetailsService(userInputChoiceService, userInputOrderPrompt);
-    SaveUserCommand saveUserCommand = new SaveUserCommand(userInfoDiscStorageHandler);
+    SaveUserCommand saveUserCommand = new SaveUserCommand(storageHandler);
 
     return new UserManager(userInteractionService,
         addUserDetailsService, sortUserDetailsService, deleteUserDetails,
-        userInfoDiscStorageHandler, saveUserCommand);
+        storageHandler, saveUserCommand);
   }
 }

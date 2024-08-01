@@ -1,7 +1,6 @@
 package org.example.services;
 
 import java.util.Scanner;
-import org.example.exceptions.InvalidArgument;
 
 public class UserInputOrderService {
   Scanner scanner = new Scanner(System.in);
@@ -14,11 +13,13 @@ public class UserInputOrderService {
   }
 
   public int getUserInputOrder() {
-    try{
+    try {
       int userInput = scanner.nextInt();
       return userInput;
-    }catch (Exception e){
-      throw new InvalidArgument("userInput should be a valid integer");
+    } catch (Exception e) {
+      System.out.println("Invalid input. Please enter a valid integer.");
+      scanner.next(); // Clear invalid input
+      return getUserInputOrder(); // Retry input
     }
   }
 }

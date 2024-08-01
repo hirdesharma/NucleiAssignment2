@@ -4,7 +4,7 @@ import java.util.Set;
 import org.example.model.User;
 
 public interface StorageHandlerInterface {
-  void saveUserInfoToDiscStorage(Set<User> user);
+  void saveUsersToDisc(Set<User> user);
 
   Set<User> getUsersFromDisk();
 }

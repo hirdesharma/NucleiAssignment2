@@ -5,12 +5,12 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Set;
-import java.util.TreeSet;
 import org.example.exceptions.InvalidArgument;
 import org.example.model.User;
 
-public class UserInfoDiscStorageHandler implements StorageHandlerInterface {
-  public void saveUserInfoToDiscStorage(Set<User> user) {
+public class StorageHandler implements StorageHandlerInterface {
+  @Override
+  public void saveUsersToDisc(Set<User> user) {
     String filename = "userInfo.ser";
     try {
       FileOutputStream file = new FileOutputStream(filename);
@@ -20,12 +20,13 @@ public class UserInfoDiscStorageHandler implements StorageHandlerInterface {
       file.close();
       System.out.println("User Info Saved to the Disk Storage");
     } catch (Exception e) {
-      System.out.println("Information wasn't save successfully");
+      System.out.println("Information wasn't save successfully" + e.getMessage());
     }
   }
 
+  @Override
   public Set<User> getUsersFromDisk() {
-    Set<User> users = new TreeSet<>();
+    Set<User> users;
     String filename = "userInfo.ser";
     try {
       FileInputStream file = new FileInputStream(filename);
